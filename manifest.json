@@ -4,30 +4,25 @@
     "version": "0.0.9",
     "description": "debug tool for vf player",
     "icons": {
-        "16": "src/img/icon.jpg",
-        "48": "src/img/icon.jpg",
-        "128": "src/img/icon.jpg"
+        "16": "src/img/icon.png",
+        "48": "src/img/icon.png",
+        "128": "src/img/icon.png"
     },
     "background": {
-        "page": "src/background.html",
-        "scripts": ["src/js/background.js"]
+        "page": "src/background.html"
     },
     "browser_action": {
-        "default_icon": "img/icon.png",
+        "default_icon": "src/img/icon.png",
         "default_title": "A debug tool for vf player",
-        "default_popup": "popup.html"
+        "default_popup": "src/popup.html"
     },
-    "page_action":
-	{
-		"default_icon": "img/icon.png",
-		"default_title": "我是pageAction",
-		"default_popup": "popup.html"
-	},
     "content_scripts": [
         {
             "matches": [
+                "<all_urls>"
             ],
             "js": [
+                "src/js/inject.js"
             ],
             "css": [
             ],
