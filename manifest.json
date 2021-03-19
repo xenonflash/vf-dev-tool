@@ -1,0 +1,61 @@
+{
+    "manifest_version": 2,
+    "name": "vf-dev-tool",
+    "version": "0.0.9",
+    "description": "debug tool for vf player",
+    "icons": {
+        "16": "src/img/icon.jpg",
+        "48": "src/img/icon.jpg",
+        "128": "src/img/icon.jpg"
+    },
+    "background": {
+        "page": "src/background.html",
+        "scripts": ["src/js/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_title": "A debug tool for vf player",
+        "default_popup": "popup.html"
+    },
+    "page_action":
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},
+    "content_scripts": [
+        {
+            "matches": [
+            ],
+            "js": [
+            ],
+            "css": [
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+    ],
+    "homepage_url": "https://vipkid-edu.github.io/vf-docs/",
+    "chrome_url_overrides": {
+        "newtab": "src/newtab.html"
+    },
+    "options_ui": {
+        "page": "src/options.html",
+        "chrome_style": true
+    },
+    "omnibox": {
+        "keyword": "vfdev"
+    },
+    "default_locale": "zh_CN",
+    "devtools_page": "src/devtool.html"
+}
